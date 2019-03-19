@@ -1,0 +1,20 @@
+1. Passport authentication
+In this solution we need to build Token Based Authentication, so I choose Passport API Authentication. It seems to be very powerful with possibilities for easy scale if needed. The Passport migrations creates the needed tables to store clients and access tokens. To use the protected route, we need to generate an access token and pass it in request headers.
+
+2. Base controller validation
+Laravel default responses are more proper for web-based solutions, so in order to have a proper API response I created a simple response/error generator in the BaseController.
+
+3. DB layer
+I prefer to separate database operations from controllers whenever possible. The logic looks clean and readable this way. So, I created a very simple service pattern layer for Post and Tags database interactions.
+
+4. Endpoints
+We have 2 endpoints, related to register and token generating and one main endpoint for Post creation. All the endpoints work with POST requests.
+http://localhost:8000/api/register
+http://localhost:8000/oauth/token
+http://localhost:8000/api/post
+
+5. Database
+As set in the config file, database name is blog.
+
+6. Screenshots
+I took few screenshots to demonstrate the solutions responses.
